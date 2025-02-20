@@ -46,10 +46,15 @@ const handleRegistrationSubmit=async(e)=>{
 <h1> Registration Form </h1>
     <form onSubmit={handleRegistrationSubmit}>
     
-    <input type='text' name='username ' placeholder='username ' onchange={handleRegistrationChange} value={RegistrationData.username} required></input>
+    <input type='text' name='username' placeholder='username' onChange={handleRegistrationChange} value={RegistrationData.username} required></input>
+    <br/>
     
-     <input type='password' name='password' placeholder='password' onchange={handleRegistrationChange} value={RegistrationData.username} required></input>
+     <input type='password' name='password' placeholder='password' onChange={handleRegistrationChange} value={RegistrationData.password} required></input>
+     <br/>
+     <br/>
     <button type='submit'>Register</button>
+
+    <br/>
     <p>Already Registered 
     <Link to="/login">Login Here </Link>
 
