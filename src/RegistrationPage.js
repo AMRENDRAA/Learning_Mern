@@ -24,7 +24,10 @@ const handleRegistrationChange=(e)=>{
 const handleRegistrationSubmit=async(e)=>{
   e.preventDefault();
   try{
-    const response = await axios.post(`${process.env. REACT_APP_BASE_URL}register`,RegistrationData);
+    const response = await axios.post(`${process.env. REACT_APP_BASE_URL}register`,RegistrationData, {
+      headers: {
+        'Content-Type': 'application/json'
+      }});
     console.log(response.data );
   }catch(error){
     console.log(error);

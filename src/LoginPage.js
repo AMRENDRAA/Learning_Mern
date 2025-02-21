@@ -15,7 +15,10 @@ export const LoginPage = () => {
  const handleLoginSubmit= async (e)=>{
   e.preventDefault();
   try {
-    const response = await axios.post(`${process.env. REACT_APP_BASE_URL}login`, loginData);
+    const response = await axios.post(`${process.env. REACT_APP_BASE_URL}login`, loginData ,{
+      headers: {
+        'Content-Type': 'application/json'
+      }});
     const { success, message } = response.data;
 
     if (success) {
